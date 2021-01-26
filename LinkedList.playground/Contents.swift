@@ -38,24 +38,19 @@ class LinkedList {
         }
         current?.next = Node(value: value, next: nil)
     }
-    
     // Delete value
     func delete(value: Int) {
         if head?.value == value {
             head = head?.next
         }
-        
         var prev: Node?
         var current = head
-        
         while current != nil && current?.value != value {
             prev = current
             current = current?.next
         }
         prev?.next = current?.next
     }
-    
-    
     func firstNode() {
         let three = Node(value: 3, next: nil)
         let two = Node(value: 2, next: three)
@@ -72,7 +67,6 @@ sampleList.insert(value: 3)
 // 1 -> 2 -> 3 -> nil
 
 sampleList.delete(value: 1)
-// 1 -> 3 -> nil
 sampleList.displayListItems()
 
 
